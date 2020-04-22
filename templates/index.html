@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AI based Covid Detector</title>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+
+	<style>
+</style>
+</head>
+<body>
+
+    <div class="container">
+	
+        <h2 class="my-5 mx-lg-5">
+            <strong>AI Based Covid Detection System</strong>
+        </h2>
+		<br>
+		<br>
+        <div class="px-lg-5 pt-0">
+		
+            <form action="{{ url_for('predict')}}"  method="POST" enctype=multipart/form-data class="md-form" style="color: #757575;">
+                
+					<input type=file name=file required="required">
+					<br>
+					<input class="btn aqua-gradient" type=submit value="predict">
+                <div class="d-flex justify-content-end">
+                    
+                </div>
+            </form>
+		
+     </p>
+  </form>
+		</div>
+		{{predictions}}
+        <hr>
+		
+        <p>Contact : Niroop Sriram [ram.niroop@gmail.com] | Mani Yegateeli </a></p>
+		
+    </div>
+    
+    <script>
+        <!--$('form').on('submit', function (e) {
+            e.preventDefault();
+            $.post(window.location.href, $(this).serialize(), function (data) {
+                console.log('Result Found!')
+                $('textarea').val(data)
+            });
+        });-->
+    </script>
+</body>
+</html>
