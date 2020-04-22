@@ -10,12 +10,9 @@ from keras.preprocessing import image
 
 app = Flask(__name__)
 #model = keras.models.load_model('Covid_Vgg.h5')
-@app.route("/index/")
+@app.route("/")
 def index():
     #return render_template('index.html')
     return 'Hello, World!'
-
-@app.route("/index/", methods=['POST'])
-
 if __name__ == '__main__':
     app.run(debug=True)
